@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="DATABASE"> https://android-kotlin-fun-mars-server.appspot.com/</string>
+    <string name="FILE_NAME"> https://android-kotlin-fun-mars-server.appspot.com/</string>
+    <string name="DIR"> https://android-kotlin-fun-mars-server.appspot.com/</string>
+    <string name="EXT_DIR"> https://android-kotlin-fun-mars-server.appspot.com/</string>
+    <string name="test">aaaa</string>
+
+</resources>

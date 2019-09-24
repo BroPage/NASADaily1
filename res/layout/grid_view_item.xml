@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright 2019, The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="353dp">
+
+        <ImageView
+            android:id="@+id/mars_image"
+            android:layout_width="377dp"
+            android:layout_height="264dp"
+            android:layout_marginBottom="84dp"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{picture.imgSrcUrl}"
+            app:layout_constraintBottom_toTopOf="@+id/property_type_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="191dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/property_type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{picture.title}"
+            android:textColor="#de000000"
+            android:textSize="39sp"
+            app:layout_constraintStart_toStartOf="@id/mars_image"
+            app:layout_constraintTop_toBottomOf="@+id/mars_image"
+            tools:layout_conversion_absoluteHeight="52dp"
+            tools:layout_conversion_absoluteWidth="76dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/price_value_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@{picture.copyright}"
+            android:textColor="#de000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/property_type_text"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="87dp"
+            tools:text="Copyright" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+       <variable
+            name="picture"
+            type="com.pagetyler.nasadaillypict.network.NasaPicture" />
+    </data>
+</layout>
